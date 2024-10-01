@@ -94,6 +94,12 @@ footer p {
     gap: 20px;
 }
 
+@media (max-width: 600px) {
+    .main-cards {
+        grid-template-columns: repeat(auto-fill, 100%);
+    }
+}
+
 .cards {
     display: flex;
     flex-direction: column;
