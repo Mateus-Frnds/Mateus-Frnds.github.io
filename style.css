@@ -15,11 +15,14 @@ body {
 
 /* HEADER */
 header {
+    top: 0;
+    width: 100%;
     padding: 16px 50px;
     background-color: rgb(3, 81, 81);
     color: white;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     z-index: 1;
+    position: sticky;
 }
 
 .logo{
@@ -37,7 +40,8 @@ header {
     width: 100%;
     color: white;
     display: grid;
-    padding: 28px 70px;
+    padding: 28px 70px; 
+    background-color: gray;
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url(https://zinenegocios.com.br/site/wp-content/uploads/2021/11/Design-sem-nome-2.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -88,8 +92,15 @@ footer p {
 
 .main-cards {
     display: grid;
-    grid-template-columns: repeat(4, 222px);
+    grid-template-columns: repeat(auto-fill, 222px);
     justify-content: space-between;
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+    .main-cards {
+        grid-template-columns: repeat(auto-fill, 100%);
+    }
 }
 
 .cards {
@@ -148,6 +159,7 @@ footer p {
     border-radius: 5px;
     padding: 10px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .scrum-contents button:hover {
